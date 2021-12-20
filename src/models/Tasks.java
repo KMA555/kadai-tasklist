@@ -13,10 +13,10 @@ import javax.persistence.Table;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "getAllMessages", query = "SELECT m FROM Message AS m ORDER BY m.id DESC")
+        @NamedQuery(name = "getAllTasks", query = "SELECT m FROM Tasks AS m ORDER BY m.id DESC")
 })
-@Table(name = "messages")
-public class Message {
+@Table(name = "tasks")
+public class Tasks {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -62,4 +62,9 @@ public class Message {
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
+    //
+    //    public void setTitle(String Tasks) {
+    //        // TODO 自動生成されたメソッド・スタブ
+    //
+    //    }
 }
